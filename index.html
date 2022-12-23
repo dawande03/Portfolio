@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>S</span>hubham.</h1>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <p>Mern stack Developer</p>
+                <h1>Hi I'm <span>shubham</span></h1>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-------------About-------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum non, modi consectetur aperiam ea
+                        alias iure voluptas delectus iste sit obcaecati nostrum ratione voluptate? In eos ratione
+                        veritatis excepturi? Aliquid?</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <!--skills-->
+
+                    <div class="tab_contents active_tab" id="skills">
+                        <ul>
+                            <li><span>MERN</span><br>Developing web applications</li>
+                        </ul>
+                    </div>
+
+                    <!--experience section-->
+
+                    <div class="tab_contents" id="experience">
+                        <ul>
+                            <li><span>Software engineer</span><br>Working in Advertricssoft IT system Pvt Ltd, have a 9
+                                months Experience</li>
+                        </ul>
+                    </div>
+
+                    <!--education-->
+                    <div class="tab_contents" id="education">
+                        <ul>
+                            <li><span>Engineering</span><br>bachelor of engineering in E&TC 2017</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam ipsam provident
+                        assumenda quidem corporis excepturi eius nihil, iure temporibus.</p>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam ipsam provident
+                        assumenda quidem corporis excepturi eius nihil, iure temporibus.</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam ipsam provident
+                         assumenda quidem corporis excepturi eius nihil, iure temporibus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----portfolio------>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontects = document.getElementsByClassName("tab_contents")
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links")
+            }
+            for (tablink of tabcontects) {
+                tablink.classList.remove("active_tab")
+            }
+            event.currentTarget.classList.add("active-links")
+            document.getElementById(tabname).classList.add("active_tab")
+        }
+    </script>
+</body>
+
+</html>
